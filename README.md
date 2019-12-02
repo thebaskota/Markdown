@@ -7,12 +7,13 @@
 ####### lets try, no luck
 
 <!-- Yo yo comments,  this is italic-->
-* pasta * is italic
+*pasta* is italic
 
 _not like python main_ is italic
 
 <!-- Comments again, Bold -->
 ** Is Bold ** Is bold
+
 __lke python main__ is bold
 
 <!-- strikethrough -->
