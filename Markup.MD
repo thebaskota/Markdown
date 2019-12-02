@@ -1,4 +1,4 @@
-<<-- the markup tutorial-->
+<!-- the markup tutorial-->
 # Markdown
 ## hi mark
 ### hello
