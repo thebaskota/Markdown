@@ -33,3 +33,14 @@ ___
 <!--link-->
 [Shubham Subedi](http://www.github.com/shubham1o1)
 
+```java
+public class FirstClass
+{
+  FirstClass(){}
+  public static void main(String[] args)
+  {
+    System.out.println("this is java");
+   }
+}
+
+```
