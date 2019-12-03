@@ -120,7 +120,42 @@ git merger login #merge master and branch login
 ```
 ---
 ## remote Repositories:
+*Sign-in to Github
+*Create anew repo
+*copy ```git remote add origin '[link]' ``` and paste in bash. this adds remote repository
+```bash
+git remote #lists all the remote repository
+origin
 
+git push -u origin master
+```
+*sign in form appears , log in and reload the github page. Files will be added
+* after this you can just follow simple steps:
+
+```bash
+touch readme.md
+git add .
+git push #no need for -u, origin and no need to log in again
+```
+
+### Cloning
+Click on *Clone or download* dropdown in github and copy the link provided.
+
+In new folder open bash and type the following :
+
+```bash
+git clone [paste the link provided]
+```
+
+### Pull
+
+If someone else made the changes to your repo and you want to import the changed files, use pull
+
+In original folder type:
+```bash
+git pull
+already upto date # if no changes is found this message is recieved
+```
 
 
 
