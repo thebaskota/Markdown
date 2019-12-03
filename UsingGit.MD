@@ -105,9 +105,9 @@ log.txt
 /dir2
 ```
 
-** Now log.txt ad dir2 will be ignored and wont be committed **
+**Now log.txt ad dir2 will be ignored and wont be committed**
 
-##Branches
+## Branches
 
 ```bash
 git branch login  #creates a branch named login
