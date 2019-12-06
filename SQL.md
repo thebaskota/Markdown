@@ -110,7 +110,14 @@ IN	        To specify multiple possible values for a column
 SELECT * FROM Customers
 WHERE Age BETWEEN 5 AND 20
 
-SELECT 
+SELECT * FROM customers 
+WHERE City LIKE 's%';    #returns city name starting with s, for all cities just keep %'
+
+SELECT * FROM Customers
+WHERE City IN ('Paris','London');
+```
+
+
 
 
 
