@@ -3,7 +3,6 @@
 * SQL stands for Structured Query Language
 * SQL lets you access and manipulate databases
 * SQL keywords are NOT case sensitive: select is the same as SELECT
-* 
 ---
 **Semicolon after SQL Statements?**
 ```
