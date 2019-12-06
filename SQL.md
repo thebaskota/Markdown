@@ -85,6 +85,36 @@ WHERE condition;
 SELECT * FROM Customers
 WHERE Country='Mexico';
 ```
+SQL requires single quotes around text values (most database systems will also allow double quotes).
+
+However, numeric fields should not be enclosed in quotes:
+```sql
+    SELECT * FROM Customers
+    WHERE CustomerID=1;
+    ```
+
+Operators:
+
+=	        Equal	
+>	        Greater than	
+<	        Less than	
+>=	        Greater than or equal	
+<=	        Less than or equal	
+<>	        Not equal. Note: In some versions of SQL this operator may be written as !=	
+BETWEEN	    Between a certain range	
+LIKE	    Search for a pattern	
+IN	        To specify multiple possible values for a column
+
+```sql
+
+SELECT * FROM Customers
+WHERE Age BETWEEN 5 AND 20
+
+SELECT 
+
+
+
+
 
 
 
