@@ -34,6 +34,7 @@ statement to be executed in the same call to the server.
 **CREATE INDEX** - creates an index (search key)
 
 **DROP INDEX** - deletes an index
+
 ---
 ### The Real Deal:
 
