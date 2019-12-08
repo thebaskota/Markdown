@@ -134,6 +134,25 @@ SELECT column1, column2, ...
 FROM table_name
 WHERE NOT condition;
 ```
+#### ORDER BY
+**Syntax**
+```sql
+SELECT column1,column2,...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
+
+```
+
+eg:
+```sql
+SELECT CustomerName FROM Customers
+ORDER BY Country;
+
+SELECT * FROM Customers
+ORDER BY Country DESC;
+```
+
+
 
 
 
