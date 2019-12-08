@@ -10,7 +10,8 @@ public class BankAccount
  String cus_name;
  String cus_address;
  String cus_phone;
- boolean status; 
+ boolean status;
+ int balance;
  
  //Constructors go here
  BankAccount(){
@@ -18,6 +19,8 @@ public class BankAccount
     this.cus_address = "";
     this.cus_phone = "";
     this.status = true;
+    this.ac_num = 1;
+    this.balance = 0;
     
     }
  //default constructor
@@ -39,18 +42,29 @@ public class BankAccount
         this.cus_name = input.nextLine();
         this.cus_address = input.nextLine();
         this.cus_phone = input.nextLine();
-     
+        
     }
+ int deposit()
+ {
+     System.out.println("Enter the aomunt to deposit");
+     int deposit_amount = input.nextInt();
+     this.balance = this.balance + deposit_amount;
+     System.out.println("The balance is " + this.balance);
+     return deposit_amount;
+    }
+    
+    
     public static void main(String[] args)
     {
        //this is the main function.
        boolean flag = true;
+       BankAccount cust = new BankAccount();
        while(flag )
        {
          welcomeToAll();
          System.out.println("Please state your business ");
          switchCase();
-         BankAccount cust = new BankAccount();
+         
          int switch_case = input.nextInt();
          input.nextLine();
          
@@ -65,12 +79,20 @@ public class BankAccount
             break;
             
             case 2://checking the balance
-            
-            
+            System.out.println("Customer name:"+ cust.cus_name + " \n balance : " + cust.balance);
             break;
             
             case 3://Deposit an amount
-            //statements here
+            if(cust.status)
+            {
+                int dep_amt = cust.deposit();
+                System.out.println("you deposited" + dep_amt);
+            }
+            else
+            {
+                System.out.println("the acount is not active");
+            }
+            
             break;
             
             case 4://withdraw an amount
