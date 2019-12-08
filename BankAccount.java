@@ -90,13 +90,30 @@ public class BankAccount
             }
             else
             {
-                System.out.println("the acount is not active");
+                System.out.println("the account is not active");
             }
             
             break;
             
             case 4://withdraw an amount
-            //statements here
+                if(cust.status)
+                {
+                    if(cust.balance > withdraw_amount)
+                    {
+                        System.out.println("Please enter an amount to withdraw");
+                        int wthdraw_amount = input.nextInt();
+                        cust.balance = cust.balance - withdraw_amount;
+                        System.out.println("you withdrew  :" withdraw_amount);
+                    }
+                    else{
+                        System.out.println("you don't have enough balance");
+                    }
+                }
+                else
+                {
+                    System.out.println("Account not active");
+                }
+            
             break;
             
             case 5://Apply for credit card
