@@ -134,6 +134,7 @@ SELECT column1, column2, ...
 FROM table_name
 WHERE NOT condition;
 ```
+--
 #### ORDER BY
 **Syntax**
 ```sql
@@ -151,7 +152,19 @@ ORDER BY Country;
 SELECT * FROM Customers
 ORDER BY Country DESC;
 ```
+--
+#### INSERT INTO
+Used to insert new records in  a table.
 
+```sql
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+```
+example:
+```sql
+INSERT INTO Customers(CustomerName, ContactName, Address, City, Postalcode, Country)
+VALUES('Ram Bahadur', 'Rame', 'Maitidevi' , 'Kathmandu','44100','Nepal');
+```
 
 
 
