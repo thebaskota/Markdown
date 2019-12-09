@@ -349,11 +349,11 @@ WHERE CustomerName NOT LIKE '%a';
 
 #### Wildcard Characters in SQL Server:
 
-|**Symbol	    |        Description	                    |     Example**                        |
-|---------------|-------------------------------------------|--------------------------------------|
-|%	            | Represents zero or more characters	    | bl% finds bl, black, blue, and blob  |
-|_	            | Represents a single character	            | h_t finds hot, hat, and hit          |
-|[]	            | Represents any single character           | h[oa]t finds hot and hat,            |
+|**Symbol	    |        Description	                                        |     Example**                        |
+|---------------|---------------------------------------------------------------|--------------------------------------|
+|%	            | Represents zero or more characters	                        | bl% finds bl, black, blue, and blob  |
+|_	            | Represents a single character	                                | h_t finds hot, hat, and hit          |
+|[]	            | Represents any single character within the brackets           | h[oa]t finds hot and hat, but not hit|
 |               | within the brackets                     	| but not hit                          |
 |^	            | Represents any character not in           | h[^oa]t finds hit, but not           |
 |               | the brackets	                            | hot and hat                          |
