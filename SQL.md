@@ -354,12 +354,74 @@ WHERE CustomerName NOT LIKE '%a';
 |%	            | Represents zero or more characters	                        | bl% finds bl, black, blue, and blob  |
 |_	            | Represents a single character	                                | h_t finds hot, hat, and hit          |
 |[]	            | Represents any single character within the brackets           | h[oa]t finds hot and hat, but not hit|
-|               | within the brackets                     	| but not hit                          |
-|^	            | Represents any character not in           | h[^oa]t finds hit, but not           |
-|               | the brackets	                            | hot and hat                          |
-|-	            | Represents a range of characters	        | c[a-b]t finds cat and cbt            |
+|^	            | Represents any character not in the brackets                  | h[^oa]t finds hit,but not hot and hat|
+|-	            | Represents a range of characters	                            | c[a-b]t finds cat and cbt            |
 
 ---
+
+#### The SQL IN operator
+
+IN operator is a shorthand for multiple OR conditions.
+```sql
+SELECT column_name
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
+
+#example:
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+
+SELECT * FROM Customers
+WHERE Country IN (SELECT Country FROM Suppliers);
+```
+
+---
+#### The BETWEEN Operator
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+SELECT CustomerName
+FROM Customers
+WHERE Age BETWEEN 15 AND 20;
+
+SELECT * FROM Products
+WHERE Price NOT BETWEEN 10 AND 20;
+
+#between with text
+SELECT * FROM Customers
+WHERE Name BETWEEN 'Anil' AND 'Ram'
+AND NOT Address IN ('ktm', 'bkt');
+
+#between dates
+SELECT * FROM Orders
+WHERE OrderDate BETWEEN #01/07/1996# AND #31/07/1996#
+
+```
+---
+#### Alias 
+
+Only valid for the duration of the query. Just like import in python. Used to make column names more redable.
+```sql
+SELECT column_name AS alias_name
+FROM table_name;
+
+SELECT CustomerID AS ID, CustomerName AS Customer
+FROM Customers;
+
+SELECT CustomerName, ADDRESS + ',' + PostalCode + ',' + City + ',' + Country AS Address
+FROM Customers; #Creates an Alias named "Address" combining four columns(Address, PostalCode, City ad Country)
+
+SELECT Orders.OrderID, Orders.OrderDate, Customers.CustomerName
+FROM Cutomers, Orders
+WHERE Customers.CustomerName = "Around the horn" AND
+Customers.CustomerID = Orders.CustomerID;
+
+```
+
+---
+
 
 
 
