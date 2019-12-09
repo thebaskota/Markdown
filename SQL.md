@@ -350,7 +350,7 @@ WHERE CustomerName NOT LIKE '%a';
 #### Wildcard Characters in SQL Server:
 
 |**Symbol	    |        Description	                    |     Example**                        |
----------------------------------------------------------------------------------------------------|
+|---------------|-------------------------------------------|--------------------------------------|
 |%	            | Represents zero or more characters	    | bl% finds bl, black, blue, and blob  |
 |_	            | Represents a single character	            | h_t finds hot, hat, and hit          |
 |[]	            | Represents any single character           | h[oa]t finds hot and hat,            |
