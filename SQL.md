@@ -259,6 +259,62 @@ example with PERCENT and WHERE clause:
 ```sql
 SELECT TOP 50 PERCENT * FROM Customers Where City = 'Kathmandu';
 ```
+---
+#### SQL MIN() and MAX() Function:
+
+MIN() Syntax
+```sql 
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+```
+MAX() Syntax
+```sql
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
+```
+---
+#### SQL COUNT(), AVG() and SUM() Function:
+##### Count() Syntax
+```sql
+SELECT COUNT ( column_name )
+FROM table_name
+WHERE condition;
+
+SELECT COUNT(ProductID)
+FROM Products;
+```
+NULL values are not counted.
+```sql 
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT AVG(Price)
+FROM Products
+WHERE Name = ' Himalaya ';
+```
+```sql
+SELECT SUM(column_name)
+FROM Table_name
+WHERE condition;
+
+SELECT SUM(Price)
+FROM Products
+WHERE Name = 'Himalaya';
+```
+---
+#### SQL LIKE Operator
+
+
+
 
 
 
