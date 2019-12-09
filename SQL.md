@@ -3,6 +3,7 @@
 * SQL stands for Structured Query Language
 * SQL lets you access and manipulate databases
 * SQL keywords are NOT case sensitive: select is the same as SELECT
+* Tutorial Based on w3schools , the database table can be found there to practice.
 ---
 **Semicolon after SQL Statements?**
 ```
@@ -166,6 +167,7 @@ INSERT INTO Customers(CustomerName, ContactName, Address, City, Postalcode, Coun
 VALUES('Ram Bahadur', 'Rame', 'Maitidevi' , 'Kathmandu','44100','Nepal');
 ```
 ---
+
 #### NULL Value
 A NULL value is different from a zero value or a field that contains spaces. A field
 with a NULL value is one that has been left blank during record creation!
@@ -183,6 +185,8 @@ FROM table_name
 WHERE column_nmae IS NOT NULL;
 ```
 Always use IS NULL to look for NULL values.
+
+---
 
 #### SQL UPDATE Statement
 
@@ -312,6 +316,35 @@ WHERE Name = 'Himalaya';
 ```
 ---
 #### SQL LIKE Operator
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE column LIKE pattern;
+
+```
+You can also combine any number of conditions using AND or OR operators.
+
+Some Examples:
+
+**LIKE Operator	                             Description**
+WHERE CustomerName LIKE 'a%'	    Finds any values that start with "a"
+WHERE CustomerName LIKE '%a'	    Finds any values that end with "a"
+WHERE CustomerName LIKE '%or%'	    Finds any values that have "or" in any position
+WHERE CustomerName LIKE '_r%'	    Finds any values that have "r" in the second position
+WHERE CustomerName LIKE 'a__%'	    Finds any values that start with "a" and are at least 3 characters in length
+WHERE ContactName LIKE 'a%o'	    Finds any values that start with "a" and ends with "o"
+
+NOT operator can also be used
+```sql
+SELECT * FROM Customers
+WHERE CustomerName NOT LIKE '%a';
+
+#returns all names that dont end with 'a'
+```
+
+---
+
 
 
 
