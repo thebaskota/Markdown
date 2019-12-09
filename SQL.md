@@ -165,7 +165,44 @@ example:
 INSERT INTO Customers(CustomerName, ContactName, Address, City, Postalcode, Country)
 VALUES('Ram Bahadur', 'Rame', 'Maitidevi' , 'Kathmandu','44100','Nepal');
 ```
+--
+#### NULL Value
+A NULL value is different from a zero value or a field that contains spaces. A field
+with a NULL value is one that has been left blank during record creation!
 
+It is not possible to test for NULL values with comparison operators, such as =, <, or <>.
+
+We will have to use the IS NULL and IS NOT NULL operators instead.
+```sql
+SELECT column_names
+FROM table_name
+WHERE column_nmae IS NULL;
+
+SELECT column_names
+FROM table_name
+WHERE column_nmae IS NOT NULL;
+```
+Always use IS NULL to look for NULL values.
+
+#### SQL UPDATE Statement
+
+Syntax:
+```sql
+UPDATE table_name
+SET column1 = value1, column2 = value2,...
+WHERE condition;
+```
+Be careful when updating records in a table! Notice the WHERE clause in the UPDATE 
+statement. The WHERE clause specifies which record(s) that should be updated. If you 
+omit the WHERE clause, all records in the table will be updated!
+
+```sql
+UPDATE Customers
+SET ContactName = 'Ram Prasad', City = 'Pokhara'
+WHERE ContactName = 'Ram Bahadur';
+```
+
+--
 
 
 
