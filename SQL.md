@@ -134,7 +134,7 @@ SELECT column1, column2, ...
 FROM table_name
 WHERE NOT condition;
 ```
---
+---
 #### ORDER BY
 **Syntax**
 ```sql
@@ -152,7 +152,7 @@ ORDER BY Country;
 SELECT * FROM Customers
 ORDER BY Country DESC;
 ```
---
+---
 #### INSERT INTO
 Used to insert new records in  a table.
 
@@ -165,7 +165,7 @@ example:
 INSERT INTO Customers(CustomerName, ContactName, Address, City, Postalcode, Country)
 VALUES('Ram Bahadur', 'Rame', 'Maitidevi' , 'Kathmandu','44100','Nepal');
 ```
---
+---
 #### NULL Value
 A NULL value is different from a zero value or a field that contains spaces. A field
 with a NULL value is one that has been left blank during record creation!
@@ -202,9 +202,63 @@ SET ContactName = 'Ram Prasad', City = 'Pokhara'
 WHERE ContactName = 'Ram Bahadur';
 ```
 
---
+---
+#### SQL DELETE Statement
+```sql
+DELETE FROM table_name WHERE condition;
+```
+```sql
+DELETE FROM Customers WHERE ContactName = 'Ram bahadur';
+```
+##### Delete All Records
+```sql
+DELETE FROM table_name;
+```
+The following SQL statement deltes all rows in the "Customers" table, without deleting the table:
 
+```sql
+DELETE FROM Customers
+```
+---
+#### SELECT TOP Clause
 
+The SELECT TOP clause is used to specify the number of records to return.
+
+The SELECT TOP clause is useful on large database, to return only the top results which couldbe more relevant.
+
+**Note :** Not all database systems support the SELECT TOP clause. MySQL supports the LIMIT clause to select a limited number of records, while Oracle uses ROWNUM.
+
+**SQL server/MS Access Syntax:**
+```sql
+SELECT TOP number|percent column_name(s)
+FROM table_name
+WHERE condition;
+
+SELECT TOP 3 * FROM Customers;
+```
+**MySQL Syntax**
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+
+SELECT * FROM Customers
+LIMIT 3;
+```
+**Oracle Syntax:**
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE ROWNUM <= number;
+
+SELECT * FROM Customers
+WHERE ROWNUM <= 3;
+```
+example with PERCENT and WHERE clause:
+```sql
+SELECT TOP 50 PERCENT * FROM Customers Where City = 'Kathmandu';
+```
 
 
 
